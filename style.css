@@ -60,3 +60,14 @@ footer {
   color: var(--muted);
   font-size: 0.95rem;
 }
+
+.hero {
+  padding-top: 96px;
+  padding-bottom: 64px;
+}
+
+.hero-intro {
+  max-width: 480px;
+  font-size: 1.05rem;
+}
+
