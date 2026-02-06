@@ -1,5 +1,6 @@
 // Premium-minimal motion: subtle, calm, fast.
 window.addEventListener("load", () => {
+  gsap.registerPlugin(ScrollTrigger);
   console.log("Reveals found:", document.querySelectorAll(".reveal").length);
 
   // Hero entrance
