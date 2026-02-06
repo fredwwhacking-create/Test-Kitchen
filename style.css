@@ -5,6 +5,7 @@
   --muted: #5b5b5b;
   --card: #ffffff;
   --border: rgba(20, 20, 20, 0.10);
+  --accent: #6b7c4f;
   --max: 980px;
 }
 
@@ -33,6 +34,7 @@ h1 {
   font-size: clamp(2rem, 4vw, 3rem);
   letter-spacing: -0.02em;
   margin: 0 0 8px;
+  color: var(--accent);
 }
 
 p {
