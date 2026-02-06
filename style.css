@@ -58,6 +58,10 @@ section:hover {
   box-shadow: 0 16px 40px rgba(20, 20, 20, 0.08);
 }
 
+section:active {
+  transform: translateY(-1px) scale(0.995);
+}
+
 h2 {
   margin: 0 0 12px;
   font-size: 1.15rem;
