@@ -48,6 +48,14 @@ section {
   border-radius: 20px;
   padding: 28px;
   margin: 32px 0;
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+  will-change: transform;
+}
+
+section:hover {
+  transform: translateY(-2px);
+  border-color: rgba(20, 20, 20, 0.18);
+  box-shadow: 0 16px 40px rgba(20, 20, 20, 0.08);
 }
 
 h2 {
