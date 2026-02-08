@@ -117,5 +117,116 @@ a {
   transform: none;
 }
 
+/* --- Day 4: Signature motion + product cards --- */
+
+.product-grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+@media (min-width: 800px) {
+  .product-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.product-card {
+  border-radius: 18px;
+  padding: 18px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.7);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.product-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.product-card__top h3 {
+  margin: 0 0 6px 0;
+}
+
+.muted {
+  opacity: 0.72;
+  margin: 0;
+}
+
+.product-tags {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 14px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.product-tags li {
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.10);
+  background: rgba(255,255,255,0.6);
+}
+
+.notes-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.10);
+  background: rgba(255,255,255,0.65);
+  cursor: pointer;
+}
+
+.notes-toggle .arrow {
+  transition: transform 180ms ease;
+}
+
+.notes-toggle[aria-expanded="true"] .arrow {
+  transform: rotate(90deg);
+}
+
+.notes {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed rgba(0,0,0,0.12);
+}
+
+/* Signature motion: ingredient ticker */
+.ticker {
+  margin-top: 14px;
+  overflow: hidden;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.10);
+  background: rgba(255,255,255,0.55);
+}
+
+.ticker__track {
+  display: inline-flex;
+  gap: 18px;
+  padding: 10px 14px;
+  white-space: nowrap;
+  will-change: transform;
+  animation: ticker-move 18s linear infinite;
+}
+
+.ticker:hover .ticker__track {
+  animation-play-state: paused;
+}
+
+.ticker__track span {
+  opacity: 0.8;
+  font-size: 13px;
+}
+
+@keyframes ticker-move {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
 
 

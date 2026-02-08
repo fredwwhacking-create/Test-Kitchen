@@ -26,6 +26,21 @@ window.addEventListener("load", () => {
     );
   });
 
+  // Day 4: Notes toggle (R&D logs)
+  document.querySelectorAll(".notes-toggle").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest(".product-card");
+      if (!card) return;
+
+      const notes = card.querySelector(".notes");
+      if (!notes) return;
+
+      const isOpen = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", String(!isOpen));
+      notes.hidden = isOpen;
+    });
+  });
+
   // Force a proper measurement pass after layout/fonts settle
   requestAnimationFrame(() => ScrollTrigger.refresh());
 });
