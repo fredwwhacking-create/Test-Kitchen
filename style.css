@@ -112,3 +112,10 @@ a {
   transform: translateY(0px) scale(0.98);
 }
 
+.reveal {
+  opacity: 1;
+  transform: none;
+}
+
+
+
